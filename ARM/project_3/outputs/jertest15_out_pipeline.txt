@@ -1,0 +1,205 @@
+--------------------
+Cycle 1:
+
+Pre-Issue Buffer:
+	Entry 0:	
+	Entry 1:	[ADDI	R1, R0, #100]
+	Entry 2:	
+	Entry 3:	
+Pre-ALU Queue:
+	Entry 0:	
+	Entry 1:	
+Post-Alu Queue:
+	Entry 0:	
+Pre-Mem Queue:
+	Entry 0:	
+	Entry 1:	
+Post-Mem Queue:
+	Entry 0:	
+	Entry 1:	
+Registers
+R00:	0	0	0	0	0	0	0	0	
+R08:	0	0	0	0	0	0	0	0	
+R16:	0	0	0	0	0	0	0	0	
+R24:	0	0	0	0	0	0	0	0	
+
+Cache
+Set 0: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 1: LRU=0
+	Entry 0: [(0,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 2: LRU=0
+	Entry 0: [(0,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 3: LRU=0
+	Entry 0: [(0,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Data
+136:	1 17 513 1 17 513 1 17 
+168:	513 1 17 513 1 17 513 
+--------------------
+Cycle 2:
+
+Pre-Issue Buffer:
+	Entry 0:	[STUR	R1, [R2, #12]]
+	Entry 1:	[STUR	R1, [R2, #14]]
+	Entry 2:	
+	Entry 3:	
+Pre-ALU Queue:
+	Entry 0:	
+	Entry 1:	[ADDI	R1, R0, #100]
+Post-Alu Queue:
+	Entry 0:	
+Pre-Mem Queue:
+	Entry 0:	
+	Entry 1:	
+Post-Mem Queue:
+	Entry 0:	
+	Entry 1:	
+Registers
+R00:	0	0	0	0	0	0	0	0	
+R08:	0	0	0	0	0	0	0	0	
+R16:	0	0	0	0	0	0	0	0	
+R24:	0	0	0	0	0	0	0	0	
+
+Cache
+Set 0: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 1: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 2: LRU=0
+	Entry 0: [(0,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 3: LRU=0
+	Entry 0: [(0,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Data
+136:	1 17 513 1 17 513 1 17 
+168:	513 1 17 513 1 17 513 
+--------------------
+Cycle 3:
+
+Pre-Issue Buffer:
+	Entry 0:	[STUR	R1, [R2, #30]]
+	Entry 1:	[LDUR	R4, [R2, #12]]
+	Entry 2:	
+	Entry 3:	
+Pre-ALU Queue:
+	Entry 0:	[ADDI	R1, R0, #100]
+	Entry 1:	
+Post-Alu Queue:
+	Entry 0:	
+Pre-Mem Queue:
+	Entry 0:	[STUR	R1, [R2, #12]]
+	Entry 1:	[STUR	R1, [R2, #14]]
+Post-Mem Queue:
+	Entry 0:	
+	Entry 1:	
+Registers
+R00:	0	0	0	0	0	0	0	0	
+R08:	0	0	0	0	0	0	0	0	
+R16:	0	0	0	0	0	0	0	0	
+R24:	0	0	0	0	0	0	0	0	
+
+Cache
+Set 0: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 1: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 2: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 3: LRU=0
+	Entry 0: [(0,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Data
+136:	1 17 513 1 17 513 1 17 
+168:	513 1 17 513 1 17 513 
+--------------------
+Cycle 4:
+
+Pre-Issue Buffer:
+	Entry 0:	[LDUR	R4, [R2, #12]]
+	Entry 1:	[MOVZ	R1, 21845, LSL 16]
+	Entry 2:	[MOVK	R2, 21845, LSL 32]
+	Entry 3:	
+Pre-ALU Queue:
+	Entry 0:	
+	Entry 1:	
+Post-Alu Queue:
+	Entry 0:	[ADDI	R1, R0, #100]
+Pre-Mem Queue:
+	Entry 0:	[STUR	R1, [R2, #14]]
+	Entry 1:	[STUR	R1, [R2, #30]]
+Post-Mem Queue:
+	Entry 0:	
+	Entry 1:	
+Registers
+R00:	0	0	100	0	0	0	0	0	
+R08:	0	0	0	0	0	0	0	0	
+R16:	0	0	0	0	0	0	0	0	
+R24:	0	0	0	0	0	0	0	0	
+
+Cache
+Set 0: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 1: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 2: LRU=1
+	Entry 0: [(1,1,21)<11111000000000001100000001000001,2>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 3: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Data
+136:	1 17 513 1 17 513 1 17 
+168:	513 1 17 513 1 17 513 
+--------------------
+Cycle 5:
+
+Pre-Issue Buffer:
+	Entry 0:	[MOVK	R2, 21845, LSL 32]
+	Entry 1:	[ASR	R5, R4, #2]
+	Entry 2:	[BREAK]
+	Entry 3:	
+Pre-ALU Queue:
+	Entry 0:	[MOVZ	R1, 21845, LSL 16]
+	Entry 1:	
+Post-Alu Queue:
+	Entry 0:	
+Pre-Mem Queue:
+	Entry 0:	[STUR	R1, [R2, #30]]
+	Entry 1:	[LDUR	R4, [R2, #12]]
+Post-Mem Queue:
+	Entry 0:	
+	Entry 1:	
+Registers
+R00:	0	100	100	0	0	0	0	0	
+R08:	0	0	0	0	0	0	0	0	
+R16:	0	0	0	0	0	0	0	0	
+R24:	0	0	0	0	0	0	0	0	
+
+Cache
+Set 0: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 1: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Set 2: LRU=0
+	Entry 0: [(1,1,21)<11111000000000001100000001000001,2>]
+	Entry 1: [(1,1,22)<11111000000000001110000001000001,2>]
+Set 3: LRU=0
+	Entry 0: [(1,0,0)<0,0>]
+	Entry 1: [(0,0,0)<0,0>]
+Data
+136:	1 17 513 1 17 513 1 17 
+168:	513 1 17 513 1 17 513 
