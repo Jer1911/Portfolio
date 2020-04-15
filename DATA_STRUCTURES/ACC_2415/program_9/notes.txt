@@ -1,0 +1,41 @@
+// Add implementation for getRightChildIndex
+// See page 519 in the Carrano textbook
+
+// Add implementation for getParentIndex
+//See page 519 in the Carrano textbook
+
+// Add implementation for isLeaf
+// Hint: In a complete binary tree, if a node has one child, it must be the left child
+//       If the index where the left child should be is larger than the index of the
+//       last node in the complete binary tree (itemCount - 1), the node has no children (is a leaf).
+
+// Add implementation for heapRebuild
+
+// See page 521 in the Carrano textbook
+// Notes: 1. The pseudocode shows 3 paraemters. This method should only have one parameter - 
+//           the index of the root node of a subtree of the heap. The other 2 parameters 
+//           shown in the pseudocode are data members of the heap object - the items array 
+//           and itemCount.
+//        2. There is a typographical error in line 10 of the pseudocoe. It should read:
+//
+//           leftChildIndex = 2 * nodeIndex + 1
+
+// Add implementation for heapCreate
+// See page 527 in the Carrano textbook
+
+// Add implementation for the default constructor.
+// Hint: Your code needs to:
+//       1. Initialize itemCount to zzero (no nodes in heap)
+//       2. Initialize maxItems to DEFAULT_CAPACITY
+//       3. Dynamically allocate an array of DEFAULT_CAPACITY itmes
+
+// Add implememtation for isEmpty
+// Hint: An empty heap contains 0 items (nodes)
+
+// Add implementation for genNumberOfNodesmethod
+// Hint: the number of nodes is stored in a data member
+
+// Add implementation for clear
+// Hint: This method just sets the number of nodes to zero.
+
+
