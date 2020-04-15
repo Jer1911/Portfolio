@@ -1,0 +1,75 @@
+
+Number of available processors: 8
+
+Using 1 threads:
+
+    1000 elements:        3 ms
+    2000 elements:        2 ms
+    4000 elements:        1 ms
+    8000 elements:        2 ms
+   16000 elements:        4 ms
+   32000 elements:        6 ms
+   64000 elements:       12 ms
+  128000 elements:       24 ms
+  256000 elements:       32 ms
+  512000 elements:       65 ms
+ 1024000 elements:      131 ms
+ 2048000 elements:      273 ms
+ 4096000 elements:      569 ms
+ 8192000 elements:     1156 ms
+16384000 elements:     2356 ms
+
+Using 2 threads:
+
+    1000 elements:        0 ms
+    2000 elements:        1 ms
+    4000 elements:        0 ms
+    8000 elements:        1 ms
+   16000 elements:        4 ms
+   32000 elements:       11 ms
+   64000 elements:       22 ms
+  128000 elements:       35 ms
+  256000 elements:       16 ms
+  512000 elements:       32 ms
+ 1024000 elements:       65 ms
+ 2048000 elements:      135 ms
+ 4096000 elements:      286 ms
+ 8192000 elements:      595 ms
+16384000 elements:     1200 ms
+
+Using 4 threads:
+
+    1000 elements:        1 ms
+    2000 elements:        0 ms
+    4000 elements:        1 ms
+    8000 elements:        2 ms
+   16000 elements:        3 ms
+   32000 elements:        6 ms
+   64000 elements:       15 ms
+  128000 elements:       22 ms
+  256000 elements:       28 ms
+  512000 elements:       24 ms
+ 1024000 elements:       49 ms
+ 2048000 elements:       89 ms
+ 4096000 elements:      173 ms
+ 8192000 elements:      368 ms
+16384000 elements:      753 ms
+
+Using 8 threads:
+
+    1000 elements:        1 ms
+    2000 elements:        0 ms
+    4000 elements:        0 ms
+    8000 elements:        0 ms
+   16000 elements:        1 ms
+   32000 elements:        1 ms
+   64000 elements:        2 ms
+  128000 elements:        4 ms
+  256000 elements:        8 ms
+  512000 elements:       18 ms
+ 1024000 elements:       35 ms
+ 2048000 elements:       73 ms
+ 4096000 elements:      156 ms
+ 8192000 elements:      294 ms
+16384000 elements:      647 ms
+
