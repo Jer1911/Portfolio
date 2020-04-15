@@ -8,3 +8,10 @@ COMPUTER_VISION - Examples of computer vision applications in matlab, from my un
 
 ARM - Simulator of the effects of a subset of ARM (Leg v8) instructions written in Python, from my university coursework
 
+DATA_STRUCTURES -
+  - ACC_2415 - Austin Community College Data Structures coursework (we took a distinctly different, more modern approach)
+  - TX_State_Uni_3358 - Texas State University Data Structures coursework (the university counted transfer credits in a strange way,
+    so it was necessary to take surplus data structures course).
+
+OOP - Object-Oriented Programming, Java
+
