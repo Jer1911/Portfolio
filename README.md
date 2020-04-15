@@ -6,3 +6,5 @@ The code is organized into folders based on discipline:
 
 COMPUTER_VISION - Examples of computer vision applications in matlab, from my university coursework
 
+ARM - Simulator of the effects of a subset of ARM (Leg v8) instructions written in Python, from my university coursework
+
