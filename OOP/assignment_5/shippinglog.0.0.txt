@@ -1,0 +1,10 @@
+Nov 20, 2017 12:41:21 PM shippingstore.MainApp <init>
+INFO: Shipping store accessed.
+Nov 20, 2017 12:41:23 PM shippingstore.MainApp$1 actionPerformed
+INFO: show packages button pressed.
+Nov 20, 2017 12:41:26 PM shippingstore.MainApp$5 actionPerformed
+INFO: show users button pressed.
+Nov 20, 2017 12:41:29 PM shippingstore.MainApp$9 actionPerformed
+INFO: show transactions button pressed.
+Nov 20, 2017 12:41:31 PM shippingstore.MainApp$10 actionPerformed
+INFO: save and quit button pressed.
