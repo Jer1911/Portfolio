@@ -1,0 +1,9 @@
+addi r2, r0, #100  96  #r2 = 100
+addi r1, r0, #5    100 #r1 = 5
+stur r1, [r2, #7]  104 #store value 5 in mem location 100 + 7*4 = 128
+ldur r5, [r2, #25]  108 #throws error since source = 100 + 25*4 = 200 does not exist.
+break              112
+14                 116
+5                  120
+48                 124
+

@@ -1,0 +1,143 @@
+addi r2, r0, #100  96  # r2 = 100
+addi r1, r0, #5    100 # r1 = 5
+stur r1, [r2, #7]  104 # store value 5 in mem location 100 + 7*4 = 128
+b    
+break              112
+14                 116
+5                  120
+48                 124
+
+----------------------------------------------------------------------------
+
+       # First deal with B and CB instructions:
+        if (d.opcode_string[instruction_index] == 'B'
+          or d.opcode_string[instruction_index] == 'CBZ'
+          or d.opcode_string[instruction_index] == 'CBNZ'):
+
+            print('branch: ' + str(d.arg1[instruction_index]))
+
+            if(d.opcode_string[instruction_index] == 'B'):
+                if(d.arg1[instruction_index] >= 0):
+                    d.pc_current += (d.arg1[instruction_index] * 4)
+                else:
+                    d.pc_current -= (d.arg1[instruction_index] * 4)
+                #d.pc_mainline = d.pc_current - 4
+
+            elif(d.opcode_string[instruction_index] == 'CBZ'):
+                if(d.arg3[instruction_index] == 0):
+                    if(d.arg1[instruction_index] >= 0):
+                        d.pc_current += (d.arg1[instruction_index] * 4)
+                    else:
+                        d.pc_current -= (d.arg1[instruction_index] * 4)
+                else:
+                    d.pc_current += 4
+
+            elif(d.opcode_string[instruction_index] == 'CBNZ'):
+                if(d.arg3[instruction_index] != 0):
+                    if(d.arg1[instruction_index] >= 0):
+                        d.pc_current += (d.arg1[instruction_index] * 4)
+                    else:
+                        d.pc_current -= (d.arg1[instruction_index] * 4)
+                else:
+                    d.pc_current += 4
+
+--------------------------------------------------------------------------------
+
+        # Simulate program:
+        k = 0
+        while (k < instruction_index):
+            print('pc main: ' + str(d.pc_mainline) + '\tpc current: ' + str(d.pc_current))
+            if (d.pc_current == d.pc_mainline):
+                d.simulate(k)
+                d.pc_current_array.append(d.pc_current)
+                d.ex_flag = True
+            else:
+                d.ex_flag = False
+            d.ex_flag_array.append(d.ex_flag)
+
+            #if(d.pc_current > d.pc_mainline):
+                #d.pc_mainline = d.pc_current
+            #else:
+            d.pc_mainline += 4
+
+            k += 1
+
+-----------------------OLD SIM WRITER METHOD-----------------------------------
+
+    # SIM WRITER:
+    def write_sim(self, instruction_index, outputFileName):
+        f = open(outputFileName + '_sim.txt', 'w')
+        i = 0
+        while (i < instruction_index):
+            if((d.ex_flag_array[i] == True)
+                and (d.opcode_string[i] != 'memory_data')):
+
+                # Cycle, PC, Instruction:
+                f.write('=' * 20 + '\ncycle:' + str(i + 1) + '\t'
+                        + str(d.pc_current_array[i])
+                        + '\t' + d.opcode_string[i] + d.arg1_string[i]
+                        + d.arg2_string[i] + d.arg3_string[i]
+                        + '\n\nregisters:\nr00:\t')
+
+                # Registers:
+                j = 0
+                while (j < 8):
+                    f.write(str(d.registers_per_instruction[i][j]) + '\t')
+                    j += 1
+                f.write('\nr08:\t')
+                while (j < 16):
+                    f.write(str(d.registers_per_instruction[i][j]) + '\t')
+                    j += 1
+                f.write('\nr16:\t')
+                while (j < 24):
+                    f.write(str(d.registers_per_instruction[i][j]) + '\t')
+                    j += 1
+                f.write('\nr24:\t')
+                while (j < 32):
+                    f.write(str(d.registers_per_instruction[i][j]) + '\t')
+                    j += 1
+                f.write('\n\ndata:\n')
+
+                # Memory Data:
+                k = 0
+                m = 0
+                local_mem = []
+                local_mem_pc = []
+
+                if(d.mem_flag == True):
+                    local_mem = d.memory_of_memory[i+1]
+                    local_mem_pc = d.memory_pc_of_memory_pc[i+1]
+                else:
+                    local_mem = d.memory_of_memory[i]
+                    local_mem_pc = d.memory_pc_of_memory_pc[i]
+
+                while(k <= int(len(local_mem) / 8)):
+                    if(k < len(local_mem)):
+                        if(m == 0):
+                            f.write(str(local_mem_pc[m]) + ':\t')
+                        else:
+                            f.write(str(local_mem_pc[m+k-1]) + ':\t')
+                        l = 0
+                        if((l+m) < len(local_mem)):
+                            while(l < 8):
+                                if((l+m) < len(local_mem)):
+                                    f.write(str(local_mem[l+m]) + '\t')
+                                else:
+                                    f.write('0\t')
+                                l += 1
+                        f.write('\n')
+                    m += 8
+                    k += 1
+
+            f.write('\n')
+            i += 1
+
+        f.close()
+
+        # Fix the trailing tab characters (and other monkey-business):
+        f = open(outputFileName + '_sim.txt', 'rw+')
+        #f.seek(0)
+        for line in f:
+            line = line.rstrip('\t')
+        f.close()
+
