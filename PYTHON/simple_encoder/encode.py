@@ -40,7 +40,7 @@ def rot(phrase, rot_val):
     return caesar_str
 
 def vigenere(phrase, key):
-    return 'buttplug'
+    return 'placeholder'
 
 def main():
     phrase = str(raw_input('\nEnter a phrase: '))
