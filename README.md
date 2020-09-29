@@ -4,7 +4,7 @@ This repository contains code taken from my private repositories, in order to pr
 
 The code is organized into folders based on discipline:
 
-WEB DEVELOPMENT / DEV-OPS / AUTOMATION - An example of a project I successfully completed and deployed at my current job.
+WEB_DEV_DEVOPS_AUTOMATION - An example of a project I successfully completed and deployed at my current job.
 
 COMPUTER_VISION - Examples of computer vision applications in matlab, university coursework
 
