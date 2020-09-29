@@ -1,0 +1,16 @@
+- hosts: localhost
+
+  tasks:
+  
+  - name: eks Terraform
+    terraform:
+      project_path: "./terraform-eks"
+      force_init: yes
+      state: "{{ state }}"
+      backend_config:
+        region: "us-west-2"
+        bucket: "speculor-terraform-bucket"
+        key: "eks/terraform.tfstate"
+        table: "speculor-terraform-table"
+    when: skip_eks_terraform is not defined and skip_all_terraform is not defined
+
