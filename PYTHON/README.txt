@@ -14,5 +14,8 @@ wbsg_translator - I wrote this to help people who use the save-game editor for
                   bothered. That said, this is a good example of my problem-
                   solving skills, and probably worth a look.
 
+photoducket - That moment when a client informed me that photobucket was holding
+              their old photos hostage, I said "I got this. Hold my beer."
+
 simple_encoder - I'm pretty sure I was bored one day...
 
