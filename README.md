@@ -6,6 +6,8 @@ The code is organized into folders based on discipline:
 
 WEB_DEV_DEVOPS_AUTOMATION - An example of a project I successfully completed and deployed at my current job.
 
+FlaskDynamoDB - Software Engineering school project contribution.
+
 COMPUTER_VISION - Examples of computer vision applications in matlab, university coursework
 
 ARM - Simulator of the effects of a subset of ARM (Leg v8) instructions written in Python, Computer Architecture university coursework

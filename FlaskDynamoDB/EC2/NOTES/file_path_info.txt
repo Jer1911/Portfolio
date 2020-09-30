@@ -1,0 +1,12 @@
+/home/ubuntu/infobot/infobot.py
+/home/ubuntu/infobot/wsgi.py
+/home/ubuntu/infobot/up.sh
+
+/etc/systemd/system/infobot.service
+
+/etc/nginx/sites-available/infobot
+
+/etc/nginx/snippets/self-signed.conf
+
+/etc/nginx/snippets/ssl-params.conf
+

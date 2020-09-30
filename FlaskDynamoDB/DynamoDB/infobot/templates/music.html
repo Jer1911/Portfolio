@@ -1,0 +1,11 @@
+{%extends "base.html"%}
+
+{%block content%}
+    {%if m4%}
+        {%for line in m4%}
+            <p style='color:red'>{{line}}</p>
+        {%endfor%}
+        <hr>
+    {%endif%}
+{%endblock%}
+

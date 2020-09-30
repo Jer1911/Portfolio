@@ -1,0 +1,30 @@
+<html>
+    <head>
+        {%if title%}
+            <title>{{title}} - Infobot</title>
+        {%else%}
+            <title>Infobot</title>
+        {%endif%}
+    </head>
+    <body style="background-color:black">
+        <div style='color:red'>Infobot: <a href="/index">Home</a>
+            <a href="/about">About</a>
+            <a href="/db_test">DBTest</a></div>
+        <hr>
+        {%if m1%}
+            <h1 style='color:red'>{{m1}}</h1>
+        {%endif%}
+        {%if m2%}
+            <p style='color:red'>{{m2}}</p>
+        {%endif%}
+        {%if m3%}
+            <h2 style='color:red'>{{m3}}</h2>
+        {%endif%}
+        {%if img_src%}
+            <img src="{{img_src}}" alt={{"img_alt"}} style={{"img_style"}}>
+        {%endif%}
+        <hr>
+        {%block content%}{%endblock%}
+    </body>
+</html>
+
