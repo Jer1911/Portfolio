@@ -7,6 +7,8 @@ rgm_score_sort - Rog-O-Matic was a program which automated playing the game
 
 geometry - Geometric area calculator.
 
+SEC - A couple of tools I wrote for security class.
+
 discrete_math - A handful of utilities I made for projects back when I was
                 taking discrete. 
 

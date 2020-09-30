@@ -17,5 +17,7 @@ wbsg_translator - I wrote this to help people who use the save-game editor for
 photoducket - That moment when a client informed me that photobucket was holding
               their old photos hostage, I said "I got this. Hold my beer."
 
+SEC - A Handful of python tools I wrote for security class.
+
 simple_encoder - I'm pretty sure I was bored one day...
 
