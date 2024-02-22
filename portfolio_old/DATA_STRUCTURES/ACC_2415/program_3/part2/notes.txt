@@ -1,8 +1,0 @@
-Add operation - Duplicate entries are not allowed in a set. If you add an entry that is already in the set, the set is not updated, but the operation is considered successful. If you add an entry that is not currently in the set, the entry needs to be added and the count of items in the set incremented by one. If the entry cannot be added for any reason, the operation fails.
-
-Get frequency of operation - Delete this operation. Since duplicate entries are not allowed, the only possible results are zero or one. This information is already provided by the contains operation.
-
-You will provide a default constructor that initializes the set to an empty set (like the bag constructor).
-
-Add a second constructor that has 2 parameters - an array of ItemType elements, and a count of the number of elements in the array. Use the array elements to initialize the set.
-

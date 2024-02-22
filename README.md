@@ -1,12 +1,23 @@
 # Portfolio - Jeremy Ecker
 
-This repository contains code taken from my private repositories, in order to
-provide employers with a representative sample of different types of
-applications I have written and contributed to.
+Note: The old portfolio has been retired; it was time. For the curious, you can
+check it out by looking at earlier commits.
 
-portfolio_old - Contains my old portfolio, mostly college work and a few other
-bits and bobs. Here you will find a mix of languages: Javascript, C++, Python,
-PHP, HTML, etc.
+**Welcome to the NEW portfolio!**
 
-portfolio_new - Contains more current samples, mostly Python + Flask application
-excerpts.
+I am focused these days on Python and Flask web applications. I own and operate
+a small consulting business (Jerhub) where that is what I do. In my (rare) spare
+time, I have been writing a tutorial series focused on showing people how to
+accomplish specific tasks with Flask that are common, but also difficult to
+locate solid tutorials on. This should serve to inform prospective clients and
+employers on a subset of my abilities, and a demonstration of understanding of
+essential concepts.
+
+**Links to the tutorial series:**
+
+- [Tutorial on the Jerhub website](https://jerhub.com/tutorials/home)
+
+- [The full code here on github](https://github.com/Jerhub-com/flask-tutorial-series)
+
+**If you'd like to get in touch:**
+- [Contact Me](https://jerhub.com/contact)
